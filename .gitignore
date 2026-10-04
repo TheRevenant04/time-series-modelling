@@ -1,0 +1,41 @@
+# dataset (144 MB, fetched from Google Drive - see notebook cell 5)
+data/
+# belt-and-braces: the parquet.brotli dataset must never be committed
+*.parquet
+*.parquet.brotli
+
+# python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# jupyter
+.ipynb_checkpoints/
+.jupyter/
+
+# secrets / local env
+.env
+.envrc
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# NOTE: uv.lock is intentionally NOT ignored - commit it, so the pinned
+# pandas==2.2.3 (matching the Colab runtime) is reproducible for everyone.
